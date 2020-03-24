@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+	box-sizing: border-box;
+	margin: 0;
+}
+.containerHead{
+	background-color: black;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.containerHead1{
+	display: flex;
+	align-items: center;
+}
+.containerHead1 > input{
+	height: 20px;
+	border-radius: 3px;
+	width: 260px;
+	color: silver;
+	opacity: 0.6;
+	background-color: silver;
+}
+#MenuLeft{
+	list-style: none;
+	display: flex;
+	color: #DCDCDC;
+}
+#MenuLeft > li{
+	padding-right: 15px;
+	font-family: verdana;
+	font-size: 12px;
+	font-weight: bold;
+}
+#MenuLeft > li:hover{
+	color: #A9A9A9;
+	cursor: pointer;
+}
+
+.containerHead2{
+	cursor: pointer;
+	padding-right: 15 px;
+}
+
+.Tringle:after{content: '\25bd';
+	 color: white;
+	height: 30px;
+}
+#littleHeader{
+	display: none;
+}
+
+/*-------- Media for head-----------------------------*/
+@media screen and (max-width: 750px) {
+  div.containerHead1 {
+    display: none;
+	}
+    div.containerHead2 {
+		display: none;
+	}
+  #littleHeader{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-basis: 100%;
+	}
+	#littleHeader >span{
+		color: white;
+		font-size: 30px;
+	}
+}
+
+/*--------Main section----------------------------*/
+.MainSection{
+	display: flex;
+	justify-content: space-between;
+	align-items: statch;
+}
+
+.MainSectionLeft{
+	background-color: #white;
+	flex: 20%;
+	padding: 20px;
+}
+
+.MainSectionRight{
+	background-color: #F5F5F5;
+	flex: 80%;
+	padding: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	
+}
+.MainSectionLeft > p {
+	font-size: 12px;
+	font-family: verdana;
+	color: #2A2C2A;
+	line-height: 150%;
+}
+
+
+/* ---------Center Block ---------------------------*/
+
+#centerBlock{
+	background: radial-gradient(farthest-corner at 40px 40px,
+								#87CEFA 0%, #F0FFF0 100%);
+				
+	border: 1px solid silver;
+	display: flex;
+	flex: 80%;
+	flex-direction:column;
+	text-align: center;
+	padding: 50px 40px;
+	margin-right: 10px;
+	align-self: stretch;
+	border-radius: 3px;
+}
+
+#centerBlock > h2{
+	font-size: 26px;
+	font-weight: normal;
+	font-family: verdana;
+	
+}
+#centerBlock > p{
+	font-size: 16px;
+	font-family: verdana;
+	color: gray;
+	padding: 10px 20px;
+	line-height: 160%;
+	
+}
+#centerBlock > form{
+	display: flex;
+	justify-content: center;
+	align-item: center;
+		
+}
+.greenBTN{
+	background: linear-gradient(to top, #2AAB2A, #7CDE7C);
+	color: white;
+	font-family: verdana;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 1px solid #32CD32;
+}
+
+.MainSectionLeft > a{
+	color: blue;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.MainSectionLeft > a:hover{
+	text-decoration: underline;
+}
+.whiteBTN{
+	font-family: verdana;
+	width: 120px;
+	height: 30px;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 1px solid silver;
+}
+
+#btnCreateG{
+	font-size: 11px;
+	width: 140px;
+	height: 30px;
+	margin-right:10px;
+	margin-bottom:10px;
+
+}
+
+#btnCreateW{
+	font-size: 11px;
+	width: 140px;
+	height: 30px;
+	background-color: white;
+	color: #2759A9;
+	margin-top: 15px;
+}
+
+#btnCreateW:hover{
+	background-color: #2759A9;
+	color: white;
+	
+}
+
+#btnRead{
+	font-size: 14px;
+	width: 180px;
+	height: 40px;
+	font-weight: 550;
+	margin: 15px;
+}
+
+.greenBTN:hover{
+	background: linear-gradient(to top, #1BB51B, #7CDE7C);
+	border: 1px solid #198919;
+}
+#btnStart{
+	background: linear-gradient(to top, silver, white);
+	color: black;
+	font-size: 14px;
+	font-family: verdana;
+	font-weight: 550;
+	width: 180px;
+	height: 40px;
+	margin: 15px;
+	border-radius: 5px;
+	corsor: pointer;
+	border: 1px solid silver;
+}
+#btnStart:hover{
+	border: 1px solid gray;
+}
+
+/*-----------------------right block ---------------------*/
+#rightBlockInMain{
+	display: flex;
+	flex: 20%;
+	flex-direction:column;
+	color: gray;
+	font-family: verdana;
+}
+#rightBlockInMain > h4{
+	font-size: 14px;
+	font-family: verdana;
+	color: #2A2C2A;
+	
+}
+#rightBlockInMain > a{
+	text-decoration: none;
+	font-size: 12px;
+	font-family: verdana;
+	color: #2A2C2A;
+	font-weight: bold;
+	line-height: 150%;
+}
+#rightBlockInMain > p{
+	font-size: 12px;
+	font-family: verdana;
+	color: gray;
+	line-height: 150%;
+}
+
+#rightBlockInMain > section{
+	display: inline;
+	font-size: 12px;
+}
+#rightBlockInMain > section span:nth-child(2n){
+	color: gray;
+	font-size: 12px;
+}
+
+#rightBlockInMain > section span:nth-child(odd){
+	color: #340B6A;
+	font-size: 18px;
+}
+#rightBlockInMain > section span:first-child{
+	color: #D821AA;
+	font-size: 18px;
+}
+#rightBlockInMain #heart2 > span:first-child{
+	color: lime;
+}
+#rightBlockInMain #heart3 > span:first-child{
+	color: #D89821;
+}
+
+/*-------- Media for main-----------------------------*/
+@media screen and (max-width: 750px){
+
+	#centerBlock > form{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	#rightBlockInMain{
+		display: none;
+	}
+}
+
+/*-------- Second Center Block-----------------------------*/
+
+#SecondCenterBlock{
+	display: flex;
+	flex-flow: row wrap;
+	flex-direction:column;
+	background-color: white;
+	border: 1px solid silver;
+	padding: 20px 30px;
+	margin-right: 10px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	align-self: stretch;
+	border-radius: 3px; 
+}
+
+#SecondCenterBlock > h3{
+	font-size: 24px;
+	font-weight: 500;
+	font-family: verdana;
+}
+#SecondCenterBlock >p{
+	font-size: 15px;
+	font-family: verdana;
+	color: #4B4848;
+}
+
+#SecondCenterBlock >p >a{
+	text-decoration: none;
+	color: #2759A9;
+}
+
+#SecondCenterBlock >p >a:hover{
+	text-decoration: underline;
+}
+
+#btnExplore{
+	background-color: white;
+	color: #2759A9;
+	margin: 15px 0px;
+}
+
+#btnExplore:hover{
+	background-color: #2759A9;
+	color: white;
+}
+
+/*-------- DownBlock-----------------------------*/
+
+.DownBlock{
+	display: flex;
+	flex-flow: row wrap;
+	flex-direction:column;
+
+}
+.DownBlock> p{
+	font-size: 12px;
+	font-family: verdana;
+	color: #4B4848;
+}
+
+.DownBlock> p >a{
+	text-decoration: none;
+	color: #2759A9;
+}
+.DownBlock> p >a:hover{
+	text-decoration: underline;
+	
+}
+
+.DownBlock> p:before{
+	content: '\270D';
+}
+
+.DownBlock> a:before{
+	content: '\2740';
+}
+
+.DownBlock> a{
+	text-decoration: none;
+	color: #4B4848;
+	font-size: 11px;
+	font-family: verdana;
+}
+
+.DownBlock> a:hover{
+	text-decoration: underline;
+	color: #2759A9;
+}
+/*-------- Footer-----------------------------*/
+
+#FooterBlock{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+	align-items: flex-start;
+	
+	font-family: verdana; 
+	font-size: 12px;
+	color: #676464;
+}
+
+#FooterBlock > section{
+	 display: flex;
+}
+
+#FooterBlock > section> span:before{
+	content: '©';
+}
+
+FooterBlock > section:first-child{
+	visibility: hidden;	
+}
+
+#FooterBlock > section> span{
+	margin: 10px;
+}
+
+.links>div>a{
+	display: flex;
+	align-items: statch;
+	flex-direction: row;
+	margin: 20px;
+	text-decoration: none;
+	color: #676464;
+}
+
+.links>div>a:hover{
+	text-decoration: underline;
+	color: #45B2D3;
+}
+
+#FooterBlock > section:first-child{
+	align-items: center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="containerHead">
+	<div class="containerHead1">
+		<img src="logo.png" height="50px">
+		<input type="text" placeholder="Search or jump to...">
+		<ul id="MenuLeft">
+			<li>Pull requests</li>
+			<li>Issues</li>
+			<li>Marketplace</li>
+			<li>Explore</li>
+		</ul>
+	</div>
+	<div class="containerHead2">
+		<img src="ring.jpg" width="20px">
+		<img src="plus.jpg" width="20px"><span class="Tringle"></span>
+		<img src="smile.jpg" width="35px"><span class="Tringle"></span>
+	</div>
+	
+<div id="littleHeader">
+	<span>&#9776;</span>
+	<img src="logo.png" height="50px">
+	<img src="ring.jpg" height="40px">
+</div>
+</div>
+
+<!-- --------Main section--------------------- -->
+<section class="MainSection">
+
+	<div class="MainSectionLeft">
+		<h4>Create your first project</h4>
+		<p>Ready to start building? Create a repository for a new idea or bring over an existing repository to keep contributing to it.</p>
+		<button class="greenBTN" id="btnCreateG">Create repository</button>
+		<a> Import repository</a>
+		<hr>
+		<h4>Working with a team?</h4>
+		<p>
+			Working with a team?
+			GitHub is built for collaboration. Set up an organization to improve the way your team works together, and get access to more features.
+		</p>
+		<button class="whiteBTN" id="btnCreateW">Create an organization</button>
+	</div>
+	
+		
+	<div class="MainSectionRight">
+	
+		<div id="GeneralCenterBlock">
+			<div id="centerBlock">
+				<h2>Learn Git and GitHub without any code!</h2>
+				<p>Using the Hello World guide, you’ll create a repository, start a branch, write comments, and open a pull request.</p>
+				<!--<input type="button" value="Read the guide">
+				<input type="button" value="Start a project">-->
+				<form>
+				  <button id="btnRead" class="greenBTN">Read the guide</button>
+				  <button id="btnStart" class="whiteBTN">Start a project</button>
+				</form>
+			</div>
+			
+			<div id="SecondCenterBlock">
+				<h3> Discover interesting projects and people to populate your personal news feed.</h3>
+				<p>
+					Your news feed helps you keep up with recent activity on 
+					repositories you <a href="#"> watch</a> and people you <a href="#">follow</a>.
+				</p>
+				<button class="whiteBTN" id="btnExplore">Explore GitHub</button>
+			</div>
+			
+			<div class="DownBlock">
+				<p>
+					<b>ProTip!</b> The feed shows you events from people you
+					<a href="#">follow</a> and repositories you <a href="#">watch</a>.
+				</p>
+				
+				<a href="#">Subscribe to your news feed </a>
+			</div>
+			
+			<!------------------footer ---------------------->
+			<section id="FooterBlock">
+				<section>
+					<img src="https://f0.pngfuel.com/png/592/138/black-cat-vector-png-clip-art.png" height="40px" hidden>
+					<img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-512.png" height="25px">
+					
+					<span> 2020 GitHub. Inc.</span>
+				</section>
+				
+				<section class="links">
+					<div>
+						<a href="#">Block </a>
+						<a href="#">About </a>
+						<a href="#">Shop </a>
+						<a href="#">Contact GitHub </a>
+						<a href="#">Pricing </a>
+					</div>
+					<div>
+						<a href="#">API </a>
+						<a href="#">Training </a>
+						<a href="#">Status </a>
+						<a href="#">Security </a>
+					</div>
+					<div>
+						<a href="#">Terms </a>
+						<a href="#">Privacy </a>
+						<a href="#">Help </a>
+					</div>
+				</section>	
+			</section>
+			
+		</div>	
+		
+		<div id="rightBlockInMain">
+			<h4>Explore repositories</h4>
+			<a href="https://github.com/hrydgard/ppsspp">hrydgard/ppsspp</a>
+			<p>
+				A PSP emulator for Android, Windows, Mac and Linux, written in C++. Want to contribute? Join us on Discord at https://discord.gg/5NJB6dD or in #ppsspp on freenode (IRC) or just send pull requests /…
+			</p>
+			<section>
+				<span>&hearts;</span>&nbsp;<span>С++</span>
+				<span>&#9733;</span>&nbsp;<span>5k</span>
+			</section>
+			
+			<hr color="lightgray" width="90%" size="1px"/>
+			<a href="#">nextcloud/vm</a>
+			<p>
+				The Nextcloud VM (virtual machine) and Home/SME Server
+			</p>
+			<section id="heart2">
+				<span>&hearts;</span>&nbsp;<span> Shell</span>
+				<span>&#9733;</span>&nbsp;<span>486</span>
+			</section>
+			
+			<hr color="lightgray" width="90%" size="1px"/>
+			<a href="#">MaterializeInc/materialize</a>
+			<p>
+				The Streaming Data Warehouse
+			</p>
+			<section id="heart3">
+				<span>&hearts;</span>&nbsp;<span> Rust</span>
+				<span>&#9733;</span>&nbsp;<span>721</span>
+			</section>
+		</div>
+		
+	</div>
+</section
+
+
+</body>
+</html>
